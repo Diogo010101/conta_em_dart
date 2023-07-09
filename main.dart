@@ -1,19 +1,27 @@
 import 'conta.dart';
 
 void main() {
-  Conta pf = Conta("Diogo Jose da Silva", 124, 25365, 1, 2000, true);
+  Conta contaDiogo = Conta(0,
+      titular: "Diogo Jose da Silva",
+      agencia: 2536,
+      numero_conta: 25487,
+      tipo: 1,
+      tem_saldo: false);
 
-  print("Titula: ${pf.titular}\n"
-      "Agência: ${pf.agencia}\n"
-      "Conta: ${pf.numero_conta}\n"
-      "Tipo: ${pf.tipo}\n"
-      "Saldo: ${pf.saldo.toStringAsFixed(2)}\n");
+  print("Titula: ${contaDiogo.titular}\n"
+      "Agência: ${contaDiogo.agencia}\n"
+      "Conta: ${contaDiogo.numero_conta}\n"
+      "Tipo: ${contaDiogo.tipo}\n"
+      "Saldo: ${contaDiogo.saldo}\n");
 
-  pf.deposito(1000);
+  print("Depositar valor");
+  contaDiogo.depositar = 200;
+  contaDiogo.depositar = 75;
+  
 
-  print("\n Fazendo retirada...");
+  print("\nSacar valor");
 
-  pf.seque(5000);
+  contaDiogo.sacar = 175;
 
-  pf.seque(800);
+  print(contaDiogo.saldo);
 }
